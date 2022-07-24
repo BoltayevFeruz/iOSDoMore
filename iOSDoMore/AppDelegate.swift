@@ -15,7 +15,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        setnavigationBar()
         return true
+    }
+    func setnavigationBar(){
+        let apperence = UINavigationBarAppearance()
+        apperence.configureWithOpaqueBackground()
+        UINavigationBar.appearance().standardAppearance = apperence
+        UINavigationBar.appearance().scrollEdgeAppearance = apperence
+        apperence.backgroundColor = .darkGray
+        apperence.titleTextAttributes = [.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().tintColor = UIColor.white
+        
+        
+        apperence.shadowImage = UIImage()
+        apperence.shadowColor = .darkGray
+        
     }
 
     // MARK: UISceneSession Lifecycle
